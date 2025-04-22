@@ -9,6 +9,8 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "embedded": "^1.1.0",
+    "sass": "^1.87.0",
     "vite": "^6.3.1"
   }
 }
