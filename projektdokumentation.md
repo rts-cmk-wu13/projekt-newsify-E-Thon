@@ -1,8 +1,8 @@
 # Projektdokumentation
 
-**Navn:** 
+**Navn:** Emilie Thon
 
-**Hold:** WUxx
+**Hold:** WU13
 
 **Uddannelse:** Webudvikler
 
