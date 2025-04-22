@@ -40,6 +40,17 @@ a {
 }
 
 /* WEIGHT */
-h1 {
-  font-weight: bold;
+h1,
+h2 {
+  font-weight: 900;
+}
+h3 {
+    font-weight: 700;
+}
+p,
+a {
+    font-weight: 400;
+}
+.btn {
+    font-weight: 600;
 }
