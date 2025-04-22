@@ -27,6 +27,11 @@
 ### Redegørelse for oprindelsen af evt. tredjeparts kode anvendt i opgaveløsningen (Teknisk dokumentation)
 
 (Hvilke node-pakker har du installeret for at dit projekt virker? Beskriv kort hvilket "problem" hver pakke løser.)
+- vite
+- sass
+- vitest 
+- coverage-v8
+- jsdom 
 
 ---
 

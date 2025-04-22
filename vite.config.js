@@ -7,5 +7,15 @@ export default defineConfig({
     },
     build: {
       outDir: 'docs',
-    }
+    },
+    test: {
+        workspace: [ 
+          { 
+            extends: true, 
+            test: { 
+              environment: 'jsdom', 
+            }, 
+          }, 
+        ], 
+      },
   })
