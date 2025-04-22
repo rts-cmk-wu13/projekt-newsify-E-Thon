@@ -1,4 +1,4 @@
-import logo from "public/newsify_logo.png";
+import logo from "/newsify_logo.png";
 
 export default function header() {
     let divElm = document.createElement("div")

@@ -1,5 +1,5 @@
 /* PRIMARY */
-$boxborder-color: $C5C5C5;
+$boxborder-color: #C5C5C5;
 $highlight-green-color: #4d861f;
 $archive-color: #46781b;
 $searchtext-color: rgb(34, 34, 34, 0.4);
@@ -21,20 +21,20 @@ $searchfield-color-dark: #d9d9d9;
   color-scheme: light dark;
   /* PRIMARY */
   --boxborder: #{$boxborder-color};
-  --highlight: {$highlight-green-color};
-  --archive: {$archive-color};
-  --searchtext: {$searchtext-color};
+  --highlight: #{$highlight-green-color};
+  --archive: #{$archive-color};
+  --searchtext: #{$searchtext-color};
 
   /* LIGHT MODE */
-  --bg-l: {$bg-color-light};
-  --navs-l: {$navigations-color-light};
-  --text-l: {$text-color-light};
-  --searchfield-l: {$searchfield-color-light};
+  --bg-l: #{$bg-color-light};
+  --navs-l: #{$navigations-color-light};
+  --text-l: #{$text-color-light};
+  --searchfield-l: #{$searchfield-color-light};
 
   /* DARK MODE */
-  --bg-d: {$bg-color-dark};
-  --fonts-d: {$fonts-color-dark};
-  --searchfield-d: {$searchfield-color-dark};
+  --bg-d: #{$bg-color-dark};
+  --fonts-d: #{$fonts-color-dark};
+  --searchfield-d: #{$searchfield-color-dark};
 }
 
 /* DATA-DARK */
@@ -50,7 +50,7 @@ $searchfield-color-dark: #d9d9d9;
 #app{
   background-color: light-dark(var(--bg-l), var(--bg-d));
 }
-h1, h2  {
+h1, h2, .ulFooter a  {
   color: light-dark(var(--navs-l), var(--fonts-d));
 }
 h3,
