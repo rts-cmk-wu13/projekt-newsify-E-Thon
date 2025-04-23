@@ -1,9 +1,13 @@
 @use "./pages/index";
+@use "./pages/home";
+// @use "./pages/popular";
+// @use "./pages/archive";
+// @use "./pages/settings";
 @use "fonts";
 @use "header";
 @use "footer";
 
-
 #app {
+    height: 100vh;
     margin: 0 auto;
 }

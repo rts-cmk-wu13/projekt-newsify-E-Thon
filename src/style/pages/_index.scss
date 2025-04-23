@@ -9,7 +9,7 @@ body {
     margin: 0 auto;
 }
 
-.mainSection {
+.mainSectionIndex {
     @extend %base;
     width: 100%;
     margin: 0 auto;
@@ -17,33 +17,33 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 5rem 5rem;
-    & img {
+    img {
         width: 6rem;
     }
-    & h1 {
+    h1 {
         font-size: 2.375rem;
     }
     &__p:first-of-type {
         padding: 1rem 0 3rem;
     }
-    & .btn1 {
+    .btn1 {
         @extend %button1;
         margin: .5rem;
     }
-    & div {
+    div {
         display: flex;
         align-items: center;
         justify-content: space-between;
         width: 100%;
         padding: 2rem;
-        & span {
+        span {
             display: block;
             width: 40%;
             height: 1px;
             background-color: light-dark(var(--navs-l), var(--fonts-d));
         }
     }
-    & .btn2 {
+    .btn2 {
         @extend %button2;
     }
     &__p:last-of-type {

@@ -1,0 +1,9 @@
+@use "../variables/color" as var;
+@use "../placeholders/base";
+@use "../placeholders/img";
+
+body {
+    @extend %base;
+    @extend %img;
+    margin: 0 auto;
+}

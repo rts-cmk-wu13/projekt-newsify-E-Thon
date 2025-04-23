@@ -1,13 +1,14 @@
 import logo from "/newsify_logo.png";
 
 export default function header() {
-    let divElm = document.createElement("div")
-    divElm.className="divHeader"
+    let headerElm = document.createElement("div");
+    headerElm.className = "headerElm"
 
-    divElm.innerHTML = `
-        <img src="${logo}" alt="Newslify logo" />  
-        <h1>Newslify</h1>
-            
+    headerElm.innerHTML = `
+        <a href="./src/views/home.html">
+            <img src="${logo}" alt="Newslify logo" />  
+            <h1>Newslify</h1>
+        </a>
     `
-    return divElm;
+    return headerElm;
 }
