@@ -1,5 +1,6 @@
 import { defineConfig } from "vite";
-	
+import getHtmlEntries from "./src/js/htmlRead.js";
+
 export default defineConfig({
     base: './',
     css: {
@@ -7,6 +8,9 @@ export default defineConfig({
     },
     build: {
       outDir: 'docs',
+      rollupOptions: {
+        input: getHtmlEntries()
+      }
     },
     test: {
         workspace: [ 
