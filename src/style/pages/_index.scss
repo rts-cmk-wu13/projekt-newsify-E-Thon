@@ -1,0 +1,53 @@
+@use "../variables/color" as var;
+@use "../placeholders/base";
+@use "../placeholders/img";
+@use "../placeholders/buttons";
+
+body {
+    @extend %base;
+    @extend %img;
+    margin: 0 auto;
+}
+
+.mainSection {
+    @extend %base;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5rem 5rem;
+    & img {
+        width: 6rem;
+    }
+    & h1 {
+        font-size: 2.375rem;
+    }
+    &__p:first-of-type {
+        padding: 1rem 0 3rem;
+    }
+    & .btn1 {
+        @extend %button1;
+        margin: .5rem;
+    }
+    & div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 2rem;
+        & span {
+            display: block;
+            width: 40%;
+            height: 1px;
+            background-color: light-dark(var(--navs-l), var(--fonts-d));
+        }
+    }
+    & .btn2 {
+        @extend %button2;
+    }
+    &__p:last-of-type {
+        padding-top: 1.5rem;
+    }
+    
+}
