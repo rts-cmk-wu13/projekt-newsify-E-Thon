@@ -1,7 +1,10 @@
+import newsList from '../newsList.js'
 import news from '../news.js'
-import switchBtn from './switch.js'
 
 export default function main() {
     document.querySelector("main").append(news())
-    switchBtn();    
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    newsList();
+});

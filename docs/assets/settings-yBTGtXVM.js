@@ -1,5 +1,5 @@
-import{l as e,h as o,f as t}from"./footer-DElvVUnn.js";function i(){let s=document.createElement("section");return s.className="mainSection",s.innerHTML=`
-    <ul>
+import{l as e,h as o,f as t}from"./footer-CQnmBAyz.js";function i(){let s=document.createElement("section");return s.className="mainSection",s.innerHTML=`
+    <ul class="news">
         <li>
             <img src="${e}" alt="Newslify logo" />  
             <h2>europe</h2>

@@ -17,17 +17,21 @@
         h2 {
             grid-column: 2/3;    
         }
-        i {
+        &__div {
             grid-column: 3/4;
             justify-self: end;
             cursor: pointer;
-            color: var(--boxborder);
+            & i {
+                color: var(--boxborder);
+            }
+
         }
     }
     li {
         border-top: 1px solid var(--boxborder);
         ul {
             display:none;
+            padding-inline-start: inherit;
         }
         li {
             display: grid;

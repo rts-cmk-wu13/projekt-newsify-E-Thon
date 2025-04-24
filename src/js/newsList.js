@@ -1,9 +1,10 @@
 export default function newsList(){
-    const chevrons = document.querySelectorAll(".chevron")
+    const newsArrows = document.querySelectorAll(".news__div")
 
-    chevrons.forEach(chevron => {
-        chevron.addEventListener("click", e => {
+    newsArrows.forEach(arrow => {
+        arrow.addEventListener("click", e => {
             let subNews = e.currentTarget.parentElement.nextElementSibling;
+            let chevron = e.currentTarget.querySelector(".chevron");
             if (subNews.style.display === "block"){
                 subNews.style.display = "none"
                 chevron.classList.remove("fa-chevron-down")

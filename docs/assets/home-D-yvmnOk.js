@@ -1,4 +1,4 @@
-import{l as r,h as l,f as t}from"./footer-DElvVUnn.js";function c(){document.querySelectorAll(".chevron").forEach(a=>{a.addEventListener("click",s=>{let i=s.currentTarget.parentElement.nextElementSibling;i.style.display==="block"?(i.style.display="none",a.classList.remove("fa-chevron-down"),a.classList.add("fa-chevron-right")):(i.style.display="block",a.classList.remove("fa-chevron-right"),a.classList.add("fa-chevron-down"))})})}function n(){let e=document.createElement("ul");return e.className="news",e.innerHTML=`
+import{l as r,h as l,f as t}from"./footer-CQnmBAyz.js";function c(){document.querySelectorAll(".chevron").forEach(a=>{a.addEventListener("click",s=>{let i=s.currentTarget.parentElement.nextElementSibling;i.style.display==="block"?(i.style.display="none",a.classList.remove("fa-chevron-down"),a.classList.add("fa-chevron-right")):(i.style.display="block",a.classList.remove("fa-chevron-right"),a.classList.add("fa-chevron-down"))})})}function n(){let e=document.createElement("ul");return e.className="news",e.innerHTML=`
         <li>
             <div>
                 <img src="${r}" alt="Newslify logo" />  
