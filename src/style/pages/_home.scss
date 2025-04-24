@@ -37,6 +37,9 @@ body {
     }
     li {
         border-top: 1px solid var(--boxborder);
+        ul {
+            display:none;
+        }
         li {
             display: grid;
             grid-template-columns: 27.83% 1fr;

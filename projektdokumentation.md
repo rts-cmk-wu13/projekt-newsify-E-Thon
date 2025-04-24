@@ -15,9 +15,11 @@
 
 -   HTML
 -   CSS
+- 	SCSS
 -   JavaScript
 -   Webpack
--	Jest
+-	Vite
+-	Vitest
 -   ...
 
 ---
@@ -38,6 +40,8 @@
 ### Argumentation for de valg du selvstændigt har truffet under løsningen af opgaven
 
 (Hvilke overvejelser har du gjort dig, fx. i forbindelse med dit valg af animationer)
+Jeg har tænkt over, om splash screen skulle laves som separat side med en transition på logoet, eller om splash siden skulle laves som en boks der fylder hele skærmen, som først har transition på logoet og derefter skjules efter x sekunder.
+På home og archieve har jeg tænkt over, om slide til siden for at gemme eller slette en artikel, skulle laves som ét komponent, der reagerede forskelligt alt efter om det var den ene eller anden side man var på, eller om det skulle laves so to forskellige sider med copy paste komponent, der derfor kunne være en js funktion på én side og en anden på en anden side.
 
 ---
 ### Vurdering af egen indsats & gennemførelse af opgaveforløbet (Arbejdsgangen)

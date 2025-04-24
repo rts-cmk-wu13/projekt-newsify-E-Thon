@@ -1,18 +1,11 @@
-import logo from "/newsify_logo.png";
-import news from '../news.js'
-
-export default function main() {
-  let sectionElm = document.createElement("section");
-  sectionElm.className = "mainSectionHome";
-
-  sectionElm.innerHTML = `
+import{l as i,h as l,f as t}from"./footer-BJ_ZUaC0.js";function c(){document.querySelectorAll(".chevron").forEach(e=>{e.addEventListener("click",s=>{let r=s.currentTarget.parentElement.nextElementSibling;r.style.display==="block"?(r.style.display="none",e.classList.remove("fa-chevron-down"),e.classList.add("fa-chevron-right")):(r.style.display="block",e.classList.remove("fa-chevron-right"),e.classList.add("fa-chevron-down"))})})}function o(){let a=document.createElement("section");return a.className="mainSectionHome",a.innerHTML=`
     <form action="#">
         <input type="search" id="search" name="search" placeholder="Search news" aria-label="Search through news on Newsify">
     </form>
     <ul>
         <li>
             <div>
-                <img src="${logo}" alt="Newslify logo" />  
+                <img src="${i}" alt="Newslify logo" />  
                 <h2>europe</h2>
                 <i class="fa-solid fa-chevron-right chevron"></i>
             </div>
@@ -26,7 +19,7 @@ export default function main() {
         </li>
         <li>
             <div>
-                <img src="${logo}" alt="Newslify logo" />  
+                <img src="${i}" alt="Newslify logo" />  
                 <h2>health</h2>
                 <i class="fa-solid fa-chevron-right chevron"></i>
             </div>
@@ -40,7 +33,7 @@ export default function main() {
         </li>
         <li>
             <div>
-                <img src="${logo}" alt="Newslify logo" />  
+                <img src="${i}" alt="Newslify logo" />  
                 <h2>sport</h2>
                 <i class="fa-solid fa-chevron-right chevron"></i>
             </div>
@@ -54,7 +47,7 @@ export default function main() {
         </li>
         <li>
             <div>
-                <img src="${logo}" alt="Newslify logo" />  
+                <img src="${i}" alt="Newslify logo" />  
                 <h2>business</h2>
                 <i class="fa-solid fa-chevron-right chevron"></i>
             </div>
@@ -68,7 +61,7 @@ export default function main() {
         </li>
         <li>
             <div>
-                <img src="${logo}" alt="Newslify logo" />  
+                <img src="${i}" alt="Newslify logo" />  
                 <h2>travel</h2>
                 <i class="fa-solid fa-chevron-right chevron"></i>
             </div>
@@ -82,11 +75,8 @@ export default function main() {
         </li>
     </ul>
         
-    `;
-
-return sectionElm;
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-    news();
-});
+    `,a}document.addEventListener("DOMContentLoaded",()=>{c()});document.querySelector("#app").innerHTML=`
+    <header></header>
+    <main></main>
+    <footer></footer>
+    `;document.querySelector("header").append(l());document.querySelector("main").append(o());document.querySelector("footer").append(t());
