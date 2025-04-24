@@ -1,4 +1,4 @@
-import{l as e,h as o,f as t}from"./footer-BJ_ZUaC0.js";function i(){let s=document.createElement("section");return s.className="mainSection",s.innerHTML=`
+import{l as e,h as o,f as t}from"./footer-DElvVUnn.js";function i(){let s=document.createElement("section");return s.className="mainSection",s.innerHTML=`
     <ul>
         <li>
             <img src="${e}" alt="Newslify logo" />  

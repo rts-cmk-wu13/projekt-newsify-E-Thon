@@ -3,11 +3,13 @@
 // @use "./pages/popular";
 // @use "./pages/archive";
 // @use "./pages/settings";
+@use "search";
+@use "news";
 @use "fonts";
 @use "header";
 @use "footer";
 
 #app {
-    height: 100vh;
+    height: 100%;
     margin: 0 auto;
 }

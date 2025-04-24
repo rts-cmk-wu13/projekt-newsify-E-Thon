@@ -5,7 +5,7 @@ export default function header() {
     headerElm.className = "headerElm"
 
     headerElm.innerHTML = `
-        <a href="./src/views/home.html">
+        <a href="home.html">
             <img src="${logo}" alt="Newslify logo" />  
             <h1>Newslify</h1>
         </a>

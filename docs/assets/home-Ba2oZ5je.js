@@ -1,11 +1,7 @@
-import{l as i,h as l,f as t}from"./footer-BJ_ZUaC0.js";function c(){document.querySelectorAll(".chevron").forEach(e=>{e.addEventListener("click",s=>{let r=s.currentTarget.parentElement.nextElementSibling;r.style.display==="block"?(r.style.display="none",e.classList.remove("fa-chevron-down"),e.classList.add("fa-chevron-right")):(r.style.display="block",e.classList.remove("fa-chevron-right"),e.classList.add("fa-chevron-down"))})})}function o(){let a=document.createElement("section");return a.className="mainSectionHome",a.innerHTML=`
-    <form action="#">
-        <input type="search" id="search" name="search" placeholder="Search news" aria-label="Search through news on Newsify">
-    </form>
-    <ul>
+import{l as r,h as l,f as t}from"./footer-DElvVUnn.js";function c(){document.querySelectorAll(".chevron").forEach(a=>{a.addEventListener("click",s=>{let i=s.currentTarget.parentElement.nextElementSibling;i.style.display==="block"?(i.style.display="none",a.classList.remove("fa-chevron-down"),a.classList.add("fa-chevron-right")):(i.style.display="block",a.classList.remove("fa-chevron-right"),a.classList.add("fa-chevron-down"))})})}function n(){let e=document.createElement("ul");return e.className="news",e.innerHTML=`
         <li>
             <div>
-                <img src="${i}" alt="Newslify logo" />  
+                <img src="${r}" alt="Newslify logo" />  
                 <h2>europe</h2>
                 <i class="fa-solid fa-chevron-right chevron"></i>
             </div>
@@ -19,7 +15,7 @@ import{l as i,h as l,f as t}from"./footer-BJ_ZUaC0.js";function c(){document.que
         </li>
         <li>
             <div>
-                <img src="${i}" alt="Newslify logo" />  
+                <img src="${r}" alt="Newslify logo" />  
                 <h2>health</h2>
                 <i class="fa-solid fa-chevron-right chevron"></i>
             </div>
@@ -33,7 +29,7 @@ import{l as i,h as l,f as t}from"./footer-BJ_ZUaC0.js";function c(){document.que
         </li>
         <li>
             <div>
-                <img src="${i}" alt="Newslify logo" />  
+                <img src="${r}" alt="Newslify logo" />  
                 <h2>sport</h2>
                 <i class="fa-solid fa-chevron-right chevron"></i>
             </div>
@@ -47,7 +43,7 @@ import{l as i,h as l,f as t}from"./footer-BJ_ZUaC0.js";function c(){document.que
         </li>
         <li>
             <div>
-                <img src="${i}" alt="Newslify logo" />  
+                <img src="${r}" alt="Newslify logo" />  
                 <h2>business</h2>
                 <i class="fa-solid fa-chevron-right chevron"></i>
             </div>
@@ -61,7 +57,7 @@ import{l as i,h as l,f as t}from"./footer-BJ_ZUaC0.js";function c(){document.que
         </li>
         <li>
             <div>
-                <img src="${i}" alt="Newslify logo" />  
+                <img src="${r}" alt="Newslify logo" />  
                 <h2>travel</h2>
                 <i class="fa-solid fa-chevron-right chevron"></i>
             </div>
@@ -73,10 +69,11 @@ import{l as i,h as l,f as t}from"./footer-BJ_ZUaC0.js";function c(){document.que
                 </li>
             </ul>
         </li>
-    </ul>
         
-    `,a}document.addEventListener("DOMContentLoaded",()=>{c()});document.querySelector("#app").innerHTML=`
+    `,e}function o(){let e=document.createElement("form");return e.className="search",e.innerHTML=`
+        <input type="search" id="search" name="search" placeholder="Search news" aria-label="Search through news on Newsify">        
+    `,e}function h(){document.querySelector("main").append(o(),n())}document.addEventListener("DOMContentLoaded",()=>{c()});document.querySelector("#app").innerHTML=`
     <header></header>
     <main></main>
     <footer></footer>
-    `;document.querySelector("header").append(l());document.querySelector("main").append(o());document.querySelector("footer").append(t());
+    `;document.querySelector("header").append(l());document.querySelector("main").append(h());document.querySelector("footer").append(t());

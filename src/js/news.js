@@ -1,20 +1,82 @@
-export default function news(){
-    const chevrons = document.querySelectorAll(".chevron")
+import logo from "/newsify_logo.png";
 
-    chevrons.forEach(chevron => {
-        chevron.addEventListener("click", e => {
-            let subNews = e.currentTarget.parentElement.nextElementSibling;
-            if (subNews.style.display === "block"){
-                subNews.style.display = "none"
-                chevron.classList.remove("fa-chevron-down")
-                chevron.classList.add("fa-chevron-right")
-            } else {
-                subNews.style.display = "block"
-                chevron.classList.remove("fa-chevron-right")
-                chevron.classList.add("fa-chevron-down")
-            }
+export default function news() {
+  let ulElm = document.createElement("ul");
+  ulElm.className = "news";
 
-        })
-    })
-    
+  ulElm.innerHTML = `
+        <li>
+            <div>
+                <img src="${logo}" alt="Newslify logo" />  
+                <h2>europe</h2>
+                <i class="fa-solid fa-chevron-right chevron"></i>
+            </div>
+            <ul class="news">
+                <li>
+                    <img src="https://placecats.com/g/100/100" alt="Image of the news article">
+                    <h3>Headline</h3>
+                    <p>Surfing is a surface water sport in which the wave rider, referred to as...</p>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <div>
+                <img src="${logo}" alt="Newslify logo" />  
+                <h2>health</h2>
+                <i class="fa-solid fa-chevron-right chevron"></i>
+            </div>
+            <ul class="news">
+                <li>
+                    <img src="https://placecats.com/g/100/100" alt="Image of the news article">
+                    <h3>Headline</h3>
+                    <p>Surfing is a surface water sport in which the wave rider, referred to as...</p>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <div>
+                <img src="${logo}" alt="Newslify logo" />  
+                <h2>sport</h2>
+                <i class="fa-solid fa-chevron-right chevron"></i>
+            </div>
+            <ul class="news">
+                <li>
+                    <img src="https://placecats.com/g/100/100" alt="Image of the news article">
+                    <h3>Headline</h3>
+                    <p>Surfing is a surface water sport in which the wave rider, referred to as...</p>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <div>
+                <img src="${logo}" alt="Newslify logo" />  
+                <h2>business</h2>
+                <i class="fa-solid fa-chevron-right chevron"></i>
+            </div>
+            <ul class="news">
+                <li>
+                    <img src="https://placecats.com/g/100/100" alt="Image of the news article">
+                    <h3>Headline</h3>
+                    <p>Surfing is a surface water sport in which the wave rider, referred to as...</p>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <div>
+                <img src="${logo}" alt="Newslify logo" />  
+                <h2>travel</h2>
+                <i class="fa-solid fa-chevron-right chevron"></i>
+            </div>
+            <ul class="news">
+                <li>
+                    <img src="https://placecats.com/g/100/100" alt="Image of the news article">
+                    <h3>Headline</h3>
+                    <p>Surfing is a surface water sport in which the wave rider, referred to as...</p>
+                </li>
+            </ul>
+        </li>
+        
+    `;
+
+return ulElm;
 }

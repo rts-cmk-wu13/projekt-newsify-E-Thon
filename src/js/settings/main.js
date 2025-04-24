@@ -5,7 +5,7 @@ export default function main() {
   sectionElm.className = "mainSection";
 
   sectionElm.innerHTML = `
-    <ul>
+    <ul class="news">
         <li>
             <img src="${logo}" alt="Newslify logo" />  
             <h2>europe</h2>
