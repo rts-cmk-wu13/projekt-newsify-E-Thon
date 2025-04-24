@@ -3,8 +3,15 @@
 @use "../placeholders/img";
 @use "../placeholders/buttons";
 
-body {
-    @extend %base;
-    @extend %img;
-    margin: 0 auto;
+.upperSection {
+  h4 {
+    text-align: center
+  }
+}
+.lowerDiv {
+  padding: 2rem 0 8rem;
+  &.btn3 {
+    @extend %button3;
+  }
+
 }
