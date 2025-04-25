@@ -1,11 +1,12 @@
-const baseURL = 'https://api.nytimes.com/svc/'
+const baseURL = 'https://api.nytimes.com/svc/';
 const apiKey = import.meta.env.VITE_NYT_API_KEY;
+const cache = JSON.parse(localStorage.getItem('cache')) ?? {};
+
 
 export async function getMostPopular(endpoint, daysPeriod){
-    const url  = new URL(`mostpopular/v2/${endpoint}/${daysPeriod}.json`, baseURL);
+    const url = new URL(`mostpopular/v2/${endpoint}/${daysPeriod}.json`, baseURL);
 
     return fetchData(url);
-    
 }
 
 async function fetchData(url){
