@@ -1,4 +1,5 @@
 import logo from "/newsify_logo.png";
+import newsList from './newsList.js'
 
 export default function news() {
   let ulElm = document.createElement("ul");
@@ -90,3 +91,7 @@ export default function news() {
 
 return ulElm;
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    newsList();
+});
