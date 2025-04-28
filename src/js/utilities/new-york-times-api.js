@@ -4,6 +4,8 @@ const cache = JSON.parse(localStorage.getItem('cache')) ?? {};
 
 async function fetchData(url){
     url.searchParams.append('api-key', apiKey)
+
+    console.log("Fetching URL:", url.href);
     
     if(cache[url.href] !== undefined){
         console.log('Returning cached data...');
@@ -21,13 +23,18 @@ async function fetchData(url){
     }
 }
 
+export async function getSearchStories(section){
+    const url = new URL(`news/v3/content/all/${section}.json`, baseURL);
+
+    return fetchData(url);
+}
 export async function getMostPopular(endpoint, daysPeriod){
     const url = new URL(`mostpopular/v2/${endpoint}/${daysPeriod}.json`, baseURL);
 
     return fetchData(url);
 }
-export async function getTopStories(endpoint, daysPeriod){
-    const url = new URL(`mostpopular/v2/${endpoint}/${daysPeriod}.json`, baseURL);
+// export async function getTopStories(endpoint, daysPeriod){
+//     const url = new URL(`mostpopular/v2/${endpoint}/${daysPeriod}.json`, baseURL);
 
-    return fetchData(url);
-}
+//     return fetchData(url);
+// }

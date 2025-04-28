@@ -1,10 +1,5 @@
 import logo from "/newsify_logo.png";
 import newsList from "./newsList.js";
-import { getMostPopular } from "./utilities/new-york-times-api.js";
-
-// FETCH OG CACHE:
-const newArticles = await getMostPopular("viewed", 7);
-console.log(newArticles[0].section);
 
 export default function news() {
   let ulElm = document.createElement("ul");

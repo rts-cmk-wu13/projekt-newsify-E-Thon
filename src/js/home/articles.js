@@ -1,11 +1,16 @@
-import {getMostPopular} from '../utilities/new-york-times-api.js';
+import {getSearchStories} from '../utilities/new-york-times-api.js';
 
 // FETCH OG CACHE:
-const newsArticles = await getMostPopular('viewed', 7)
+const newsArticlesEurope = await getSearchStories('World')
+const newsArticlesHealth = await getSearchStories('Health')
+const newsArticlesSport = await getSearchStories('sport')
+const newsArticlesBusiness = await getSearchStories('business')
+const newsArticlesTravel = await getSearchStories('Travel')
+
 
 export function europe (){
     const ul = document.querySelector(".news__articles.europe");
-    const europeArticles = newsArticles.filter(article => article.section === "Europe");
+    const europeArticles = newsArticlesEurope.filter(article => article.subsection === "Europe");
 
     ul.innerHTML = europeArticles.map(europe => {
         return `
@@ -22,9 +27,8 @@ export function europe (){
 
 export function health (){
     const ul = document.querySelector(".news__articles.health");
-    const healthArticles = newsArticles.filter(article => article.section === "Health");
 
-    ul.innerHTML = healthArticles.map(health => {
+    ul.innerHTML = newsArticlesHealth.map(health => {
         return `
         <li>
             <a href="${business.url}" target="_blank">
@@ -38,9 +42,8 @@ export function health (){
 }
 export function sport (){
     const ul = document.querySelector(".news__articles.sport");
-    const sportArticles = newsArticles.filter(article => article.section === "Sport");
     
-    ul.innerHTML = sportArticles.map(sport => {
+    ul.innerHTML = newsArticlesSport.map(sport => {
         return `
         <li>
             <a href="${business.url}" target="_blank">
@@ -55,9 +58,8 @@ export function sport (){
 }
 export function business (){
     const ul = document.querySelector(".news__articles.business");
-    const businessArticles = newsArticles.filter(article => article.section === "Business");
     
-    ul.innerHTML = businessArticles.map(business => {
+    ul.innerHTML = newsArticlesBusiness.map(business => {
         return `
         <li>
             <a href="${business.url}" target="_blank">
@@ -72,9 +74,8 @@ export function business (){
 }
 export function travel (){
     const ul = document.querySelector(".news__articles.travel");
-    const travelArticles = newsArticles.filter(article => article.section === "Travel");
     
-    ul.innerHTML = travelArticles.map(travel => {
+    ul.innerHTML = newsArticlesTravel.map(travel => {
         return `
         <li>
             <a href="${business.url}" target="_blank">
