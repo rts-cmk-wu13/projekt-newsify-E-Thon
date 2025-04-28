@@ -1,9 +1,9 @@
 import logo from "/newsify_logo.png";
-import newsList from './newsList.js'
-import {getMostPopular} from './utilities/new-york-times-api.js';
+import newsList from "./newsList.js";
+import { getMostPopular } from "./utilities/new-york-times-api.js";
 
 // FETCH OG CACHE:
-const newArticles = await getMostPopular('viewed', 7)
+const newArticles = await getMostPopular("viewed", 7);
 console.log(newArticles[0].section);
 
 export default function news() {
@@ -19,11 +19,13 @@ export default function news() {
                     <i class="fa-solid fa-chevron-right chevron"></i>
                 </div>
             </div>
-            <ul class="articles">
+            <ul class="news__articles europe">
                 <li>
-                    <img src="https://placecats.com/g/100/100" alt="Image of the news article">
-                    <h3>Headline</h3>
-                    <p>Surfing is a surface water sport in which the wave rider, referred to as...</p>
+                    <a href="#">
+                        <img src="https://placecats.com/g/100/100" alt="Image of the news article">
+                        <h3>Headline</h3>
+                        <p>Surfing is a surface water sport in which the wave rider, referred to as...</p>
+                    </a>
                 </li>
             </ul>
         </li>
@@ -35,11 +37,13 @@ export default function news() {
                     <i class="fa-solid fa-chevron-right chevron"></i>
                 </div>            
             </div>
-            <ul class="articles">
+            <ul class="news__articles health">
                 <li>
-                    <img src="https://placecats.com/g/100/100" alt="Image of the news article">
-                    <h3>Headline</h3>
-                    <p>Surfing is a surface water sport in which the wave rider, referred to as...</p>
+                    <a href="#">
+                        <img src="https://placecats.com/g/100/100" alt="Image of the news article">
+                        <h3>Headline</h3>
+                        <p>Surfing is a surface water sport in which the wave rider, referred to as...</p>
+                    </a>
                 </li>
             </ul>
         </li>
@@ -51,11 +55,13 @@ export default function news() {
                     <i class="fa-solid fa-chevron-right chevron"></i>
                 </div>            
             </div>
-            <ul class="articles">
+            <ul class="news__articles sport">
                 <li>
-                    <img src="https://placecats.com/g/100/100" alt="Image of the news article">
-                    <h3>Headline</h3>
-                    <p>Surfing is a surface water sport in which the wave rider, referred to as...</p>
+                    <a href="#">
+                        <img src="https://placecats.com/g/100/100" alt="Image of the news article">
+                        <h3>Headline</h3>
+                        <p>Surfing is a surface water sport in which the wave rider, referred to as...</p>
+                    </a>
                 </li>
             </ul>
         </li>
@@ -67,11 +73,13 @@ export default function news() {
                     <i class="fa-solid fa-chevron-right chevron"></i>
                 </div>            
             </div>
-            <ul class="articles">
+            <ul class="news__articles business">
                 <li>
-                    <img src="https://placecats.com/g/100/100" alt="Image of the news article">
-                    <h3>Headline</h3>
-                    <p>Surfing is a surface water sport in which the wave rider, referred to as...</p>
+                    <a href="#">
+                        <img src="https://placecats.com/g/100/100" alt="Image of the news article">
+                        <h3>Headline</h3>
+                        <p>Surfing is a surface water sport in which the wave rider, referred to as...</p>
+                    </a>
                 </li>
             </ul>
         </li>
@@ -83,20 +91,22 @@ export default function news() {
                     <i class="fa-solid fa-chevron-right chevron"></i>
                 </div>            
             </div>
-            <ul class="articles">
+            <ul class="news__articles travel">
                 <li>
-                    <img src="https://placecats.com/g/100/100" alt="Image of the news article">
-                    <h3>Headline</h3>
-                    <p>Surfing is a surface water sport in which the wave rider, referred to as...</p>
+                    <a href="#">
+                        <img src="https://placecats.com/g/100/100" alt="Image of the news article">
+                        <h3>Headline</h3>
+                        <p>Surfing is a surface water sport in which the wave rider, referred to as...</p>
+                    </a>
                 </li>
             </ul>
         </li>
         
     `;
 
-return ulElm;
+  return ulElm;
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    newsList();
+  newsList();
 });
