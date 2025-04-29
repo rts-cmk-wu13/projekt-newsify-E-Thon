@@ -1,7 +1,10 @@
 import '../../style/style.scss'
-import main from './main.js'
 import header from '../header.js'
 import footer from '../footer.js'
+import { upperSection, lowerDiv } from './content.js'
+import news from '../news.js'
+import switchBtn from './switch.js'
+
 
 
 document.querySelector('#app').innerHTML = `
@@ -11,5 +14,7 @@ document.querySelector('#app').innerHTML = `
     `
 
 document.querySelector("header").append(header())
-document.querySelector("main").append(main())
+document.querySelector("main").append(upperSection(), news(), lowerDiv())
 document.querySelector("footer").append(footer())
+
+switchBtn();

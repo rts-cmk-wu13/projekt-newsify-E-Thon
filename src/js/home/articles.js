@@ -1,22 +1,22 @@
-import {getSearchStories} from '../utilities/new-york-times-api.js';
+import {getNewswire} from '../utilities/new-york-times-api.js';
 
 // FETCH OG CACHE:
-const newsArticlesEurope = await getSearchStories('World')
-const newsArticlesHealth = await getSearchStories('Health')
-const newsArticlesSport = await getSearchStories('sport')
-const newsArticlesBusiness = await getSearchStories('business')
-const newsArticlesTravel = await getSearchStories('Travel')
+const newsArticlesEurope = await getNewswire('world')
+const newsArticlesHealth = await getNewswire('health')
+const newsArticlesSport = await getNewswire('sport')
+const newsArticlesBusiness = await getNewswire('business')
+const newsArticlesTravel = await getNewswire('travel')
 
 
 export function europe (){
     const ul = document.querySelector(".news__articles.europe");
-    const europeArticles = newsArticlesEurope.filter(article => article.subsection === "Europe");
+    const europeArticles = newsArticlesEurope.filter(article => article.subsection === "europe");
 
     ul.innerHTML = europeArticles.map(europe => {
         return `
         <li>
-            <a href="${business.url}" target="_blank">
-                <img src="${europe.media?.[0]?.url || 'https://placecats.com/g/100/100'}" alt="${europe.title}">
+            <a href="${europe.url}" target="_blank">
+                <img src="${europe.multimedia?.[0]?.url || 'https://placecats.com/g/100/100'}" alt="${europe.title}">
                 <h3>${europe.title}</h3>
                 <p>${europe.abstract}</p>
             </a>
@@ -31,8 +31,8 @@ export function health (){
     ul.innerHTML = newsArticlesHealth.map(health => {
         return `
         <li>
-            <a href="${business.url}" target="_blank">
-                <img src="${health.media?.[0]?.url || 'https://placecats.com/g/100/100'}" alt="${health.title}">
+            <a href="${health.url}" target="_blank">
+                <img src="${health.multimedia?.[0]?.url || 'https://placecats.com/g/100/100'}" alt="${health.title}">
                 <h3>${health.title}</h3>
                 <p>${health.abstract}</p>
             </a>
@@ -46,8 +46,8 @@ export function sport (){
     ul.innerHTML = newsArticlesSport.map(sport => {
         return `
         <li>
-            <a href="${business.url}" target="_blank">
-                <img src="${sport.media?.[0]?.url || 'https://placecats.com/g/100/100'}" alt="${sport.title}">
+            <a href="${sport.url}" target="_blank">
+                <img src="${sport.multimedia?.[0]?.url || 'https://placecats.com/g/100/100'}" alt="${sport.title}">
                 <h3>${sport.title}</h3>
                 <p>${sport.abstract}</p>
             </a>
@@ -63,7 +63,7 @@ export function business (){
         return `
         <li>
             <a href="${business.url}" target="_blank">
-                <img src="${business.media?.[0]?.url || 'https://placecats.com/g/100/100'}" alt="${business.title}">
+                <img src="${business.multimedia?.[0]?.url || 'https://placecats.com/g/100/100'}" alt="${business.title}">
                 <h3>${business.title}</h3>
                 <p>${business.abstract}</p>
             </a>
@@ -78,8 +78,8 @@ export function travel (){
     ul.innerHTML = newsArticlesTravel.map(travel => {
         return `
         <li>
-            <a href="${business.url}" target="_blank">
-                <img src="${travel.media?.[0]?.url || 'https://placecats.com/g/100/100'}" alt="${travel.title}">
+            <a href="${travel.url}" target="_blank">
+                <img src="${travel.multimedia?.[0]?.url || 'https://placecats.com/g/100/100'}" alt="${travel.title}">
                 <h3>${travel.title}</h3>
                 <p>${travel.abstract}</p>
             </a>

@@ -1,17 +1,21 @@
-import {getMostPopular} from '../utilities/new-york-times-api.js';
+import {getTopStories} from '../utilities/new-york-times-api.js';
 
 // FETCH OG CACHE:
-const newsArticles = await getMostPopular('viewed', 7)
+const newsArticlesEurope = await getTopStories('world')
+const newsArticlesHealth = await getTopStories('health')
+const newsArticlesSport = await getTopStories('sport')
+const newsArticlesBusiness = await getTopStories('business')
+const newsArticlesTravel = await getTopStories('travel')
 
 export function europe (){
     const ul = document.querySelector(".news__articles.europe");
-    const europeArticles = newsArticles.filter(article => article.section === "Europe");
+    const europeArticles = newsArticlesEurope.filter(article => article.subsection === "Europe");
 
     ul.innerHTML = europeArticles.map(europe => {
         return `
         <li>
-            <a href="${business.url}" target="_blank">
-                <img src="${europe.media?.[0]?.url || 'https://placecats.com/g/100/100'}" alt="${europe.title}">
+            <a href="${europe.url}" target="_blank">
+                <img src="${europe.multimedia?.[0]?.url || 'https://placecats.com/g/100/100'}" alt="${europe.title}">
                 <h3>${europe.title}</h3>
                 <p>${europe.abstract}</p>
             </a>
@@ -22,12 +26,11 @@ export function europe (){
 
 export function health (){
     const ul = document.querySelector(".news__articles.health");
-    const healthArticles = newsArticles.filter(article => article.section === "Health");
 
-    ul.innerHTML = healthArticles.map(health => {
+    ul.innerHTML = newsArticlesHealth.map(health => {
         return `
         <li>
-            <a href="${business.url}" target="_blank">
+            <a href="${health.url}" target="_blank">
                 <img src="${health.media?.[0]?.url || 'https://placecats.com/g/100/100'}" alt="${health.title}">
                 <h3>${health.title}</h3>
                 <p>${health.abstract}</p>
@@ -38,12 +41,11 @@ export function health (){
 }
 export function sport (){
     const ul = document.querySelector(".news__articles.sport");
-    const sportArticles = newsArticles.filter(article => article.section === "Sport");
     
-    ul.innerHTML = sportArticles.map(sport => {
+    ul.innerHTML = newsArticlesSport.map(sport => {
         return `
         <li>
-            <a href="${business.url}" target="_blank">
+            <a href="${sport.url}" target="_blank">
                 <img src="${sport.media?.[0]?.url || 'https://placecats.com/g/100/100'}" alt="${sport.title}">
                 <h3>${sport.title}</h3>
                 <p>${sport.abstract}</p>
@@ -55,9 +57,8 @@ export function sport (){
 }
 export function business (){
     const ul = document.querySelector(".news__articles.business");
-    const businessArticles = newsArticles.filter(article => article.section === "Business");
     
-    ul.innerHTML = businessArticles.map(business => {
+    ul.innerHTML = newsArticlesBusiness.map(business => {
         return `
         <li>
             <a href="${business.url}" target="_blank">
@@ -72,12 +73,11 @@ export function business (){
 }
 export function travel (){
     const ul = document.querySelector(".news__articles.travel");
-    const travelArticles = newsArticles.filter(article => article.section === "Travel");
     
-    ul.innerHTML = travelArticles.map(travel => {
+    ul.innerHTML = newsArticlesTravel.map(travel => {
         return `
         <li>
-            <a href="${business.url}" target="_blank">
+            <a href="${travel.url}" target="_blank">
                 <img src="${travel.media?.[0]?.url || 'https://placecats.com/g/100/100'}" alt="${travel.title}">
                 <h3>${travel.title}</h3>
                 <p>${travel.abstract}</p>

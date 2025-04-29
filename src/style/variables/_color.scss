@@ -9,11 +9,13 @@ $bg-color-light: #ffffff;
 $navigations-color-light: #404040;
 $text-color-light: #222222;
 $searchfield-color-light: rgb(217, 217, 217, 0.3);
+$version-color-light: #d9d9d9;
 
 /* DARK MODE */
 $bg-color-dark: #1f1f1f;
 $fonts-color-dark: #d9d9d9;
 $searchfield-color-dark: #d9d9d9;
+$version-color-dark: #A5A5A5;
 
 
 /* SCSS TO CSS */
@@ -30,11 +32,13 @@ $searchfield-color-dark: #d9d9d9;
   --navs-l: #{$navigations-color-light};
   --text-l: #{$text-color-light};
   --searchfield-l: #{$searchfield-color-light};
+  --version-l: #{$version-color-light};
 
   /* DARK MODE */
   --bg-d: #{$bg-color-dark};
   --fonts-d: #{$fonts-color-dark};
   --searchfield-d: #{$searchfield-color-dark};
+  --version-d: #{$version-color-dark};
 }
 
 /* DATA-DARK */

@@ -1,5 +1,6 @@
 import logo from "/newsify_logo.png";
 import newsList from "./newsList.js";
+import swiper from "./swiper.js";
 
 export default function news() {
   let ulElm = document.createElement("ul");
@@ -15,8 +16,8 @@ export default function news() {
                 </div>
             </div>
             <ul class="news__articles europe">
-                <li>
-                    <a href="#">
+                <li class="news__article">
+                    <a href="#" class="news__link">
                         <img src="https://placecats.com/g/100/100" alt="Image of the news article">
                         <h3>Headline</h3>
                         <p>Surfing is a surface water sport in which the wave rider, referred to as...</p>
@@ -33,8 +34,8 @@ export default function news() {
                 </div>            
             </div>
             <ul class="news__articles health">
-                <li>
-                    <a href="#">
+                <li class="news__article">
+                    <a href="#" class="news__link">
                         <img src="https://placecats.com/g/100/100" alt="Image of the news article">
                         <h3>Headline</h3>
                         <p>Surfing is a surface water sport in which the wave rider, referred to as...</p>
@@ -51,8 +52,8 @@ export default function news() {
                 </div>            
             </div>
             <ul class="news__articles sport">
-                <li>
-                    <a href="#">
+                <li class="news__article">
+                    <a href="#" class="news__link">
                         <img src="https://placecats.com/g/100/100" alt="Image of the news article">
                         <h3>Headline</h3>
                         <p>Surfing is a surface water sport in which the wave rider, referred to as...</p>
@@ -69,8 +70,8 @@ export default function news() {
                 </div>            
             </div>
             <ul class="news__articles business">
-                <li>
-                    <a href="#">
+                <li class="news__article">
+                    <a href="#" class="news__link">
                         <img src="https://placecats.com/g/100/100" alt="Image of the news article">
                         <h3>Headline</h3>
                         <p>Surfing is a surface water sport in which the wave rider, referred to as...</p>
@@ -87,8 +88,8 @@ export default function news() {
                 </div>            
             </div>
             <ul class="news__articles travel">
-                <li>
-                    <a href="#">
+                <li class="news__article">
+                    <a href="#" class="news__link">
                         <img src="https://placecats.com/g/100/100" alt="Image of the news article">
                         <h3>Headline</h3>
                         <p>Surfing is a surface water sport in which the wave rider, referred to as...</p>
@@ -102,6 +103,8 @@ export default function news() {
   return ulElm;
 }
 
+
 document.addEventListener("DOMContentLoaded", () => {
-  newsList();
-});
+    swiper();
+    newsList();
+  });
