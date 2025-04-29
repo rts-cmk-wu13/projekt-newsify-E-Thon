@@ -4,6 +4,8 @@ import footer from '../footer.js'
 import news from '../news.js'
 import search from './search.js'
 import { europe, health, sport, business, travel } from './articles.js'
+import initDarkMode from '../darkmode.js'
+
 
 
 document.querySelector('#app').innerHTML = `
@@ -21,3 +23,5 @@ health();
 sport();
 business();
 travel();
+
+initDarkMode();

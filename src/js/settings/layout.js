@@ -4,6 +4,7 @@ import footer from '../footer.js'
 import { upperSection, lowerDiv } from './content.js'
 import news from '../news.js'
 import switchBtn from './switch.js'
+import initDarkMode from '../darkmode.js'
 
 
 
@@ -18,3 +19,4 @@ document.querySelector("main").append(upperSection(), news(), lowerDiv())
 document.querySelector("footer").append(footer())
 
 switchBtn();
+initDarkMode();

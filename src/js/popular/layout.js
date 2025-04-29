@@ -3,6 +3,8 @@ import header from '../header.js'
 import footer from '../footer.js'
 import news from '../news.js'
 import { europe, health, sport, business, travel } from './popular.js'
+import initDarkMode from '../darkmode.js'
+
 
 
 document.querySelector('#app').innerHTML = `
@@ -20,3 +22,4 @@ health();
 sport();
 business();
 travel();
+initDarkMode();

@@ -16,7 +16,7 @@ export function lowerDiv () {
     divElm.className="lowerDiv"
 
     divElm.innerHTML = `
-        <button class="btn3">Toggle dark mode</button>
+        <button class="btn3" id="lightdark">Toggle dark mode</button>
         <p>Version 4.8.15.16.23.42</p>
 
     `

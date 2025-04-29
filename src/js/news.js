@@ -1,6 +1,6 @@
 import logo from "/newsify_logo.png";
 import newsList from "./newsList.js";
-import swiper from "./swiper.js";
+// import swiper from "./swiper.js";
 
 export default function news() {
   let ulElm = document.createElement("ul");
@@ -105,6 +105,6 @@ export default function news() {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    swiper();
+    // swiper();
     newsList();
   });

@@ -1,5 +1,7 @@
 import '../../style/style.scss'
 import main from './main.js'
+import initDarkMode from '../darkmode.js'
+
 
 document.querySelector('#app').innerHTML = `
     <header></header>
@@ -8,3 +10,5 @@ document.querySelector('#app').innerHTML = `
     `
 
 document.querySelector("main").append(main())
+
+initDarkMode();
