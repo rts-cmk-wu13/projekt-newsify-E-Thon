@@ -5,6 +5,7 @@ import img3 from "/onboarding3.png";
 export default function createOnboardingUI() {
   let divElm = document.createElement("div");
   divElm.className = "mainDivBoarding";
+
   divElm.innerHTML = `
   <article class="step1 active">
     <img src="${img1}" alt="Login onboarding screenshot" />
@@ -21,11 +22,13 @@ export default function createOnboardingUI() {
     <h2>Enhance your News Journey Now!</h2>
     <p>Be part of our dynamic community and contribute your insights and participate in enriching conversations.</p>
   </article>
+
   <div class="dots">
     <span class="dot active" data-step="1"></span>
     <span class="dot" data-step="2"></span>
     <span class="dot" data-step="3"></span>
   </div>
+
   <div class="navigation">
     <button class="btn1 skip">Skip</button>
     <button class="btn2 next">Continue</button>

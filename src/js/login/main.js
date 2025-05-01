@@ -15,7 +15,7 @@ export default function main() {
         <p>or</p>
         <span></span>
     </div>
-    <a href="./src/views/home.html" class="btn2">Sign in with password</a>
+    <a href="./home.html" class="btn2">Sign in with password</a>
     <p class="mainSection__p">Don't have an account? <a href="./src/views/home.html">Sign up</a></p>
     
         

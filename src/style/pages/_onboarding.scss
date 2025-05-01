@@ -9,10 +9,10 @@
         width: 100%;
         margin: 0 auto;
         padding: 4rem 2rem 1rem;
-        display: none; // Hide all articles by default
+        display: none;
         
         &.active {
-            display: block; // Show only active articles
+            display: block;
         }
         
         h2 {
