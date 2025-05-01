@@ -1,9 +1,11 @@
 @use "./placeholders/base";
 @use "./placeholders/img";
-@use "./pages/index";
+@use "./pages/login";
 @use "./pages/home";
 // @use "./pages/popular";
 // @use "./pages/archive";
+@use "./pages/splash";
+@use "./pages/onboarding";
 @use "./pages/settings";
 @use "search";
 @use "switch";

@@ -1,0 +1,59 @@
+@use "../variables/color" as var;
+@use "../placeholders/buttons";
+@use "../placeholders/base";
+
+.mainDivBoarding {
+    article {
+        @extend %base;
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+        padding: 4rem 2rem 1rem;
+        display: none; // Hide all articles by default
+        
+        &.active {
+            display: block; // Show only active articles
+        }
+        
+        h2 {
+            font-size: 2rem;
+        }
+    }
+    
+    .dots {
+        display: flex;
+        justify-content: center;
+        gap: .5rem;
+        padding: 2rem;
+        
+        .dot {
+            background-color: var(--boxborder);
+            width: 1rem;
+            height: 1rem;
+            border-radius: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .active {
+            background-color: var(--highlight);
+            width: 3rem;
+        }
+    }
+    
+    .navigation {
+        display: flex;
+        gap: 1rem;
+        padding: 1rem;
+        
+        .btn1 {
+            @extend %button1;
+            cursor: pointer;
+        }
+        
+        .btn2 {
+            @extend %button2;
+            box-shadow: none;
+            cursor: pointer;
+        }
+    }
+}

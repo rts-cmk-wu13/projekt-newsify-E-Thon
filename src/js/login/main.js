@@ -2,7 +2,7 @@ import logo from "/newsify_logo.png";
 
 export default function main() {
   let sectionElm = document.createElement("section");
-  sectionElm.className = "mainSectionIndex";
+  sectionElm.className = "mainSectionLogin";
 
   sectionElm.innerHTML = `
     <img src="${logo}" alt="Newslify logo" />  
