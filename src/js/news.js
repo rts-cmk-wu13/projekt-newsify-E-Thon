@@ -8,7 +8,7 @@ export default function news() {
 
   ulElm.innerHTML = `
         <li>
-            <div>
+            <div class="news__box">
                 <img src="${logo}" alt="Newslify logo" />  
                 <h2>europe</h2>
                 <div class="news__div">
@@ -26,7 +26,7 @@ export default function news() {
             </ul>
         </li>
         <li>
-            <div>
+            <div class="news__box">
                 <img src="${logo}" alt="Newslify logo" />  
                 <h2>health</h2>
                 <div class="news__div">
@@ -44,7 +44,7 @@ export default function news() {
             </ul>
         </li>
         <li>
-            <div>
+            <div class="news__box">
                 <img src="${logo}" alt="Newslify logo" />  
                 <h2>sport</h2>
                 <div class="news__div">
@@ -62,7 +62,7 @@ export default function news() {
             </ul>
         </li>
         <li>
-            <div>
+            <div class="news__box">
                 <img src="${logo}" alt="Newslify logo" />  
                 <h2>business</h2>
                 <div class="news__div">
@@ -80,7 +80,7 @@ export default function news() {
             </ul>
         </li>
         <li>
-            <div>
+            <div class="news__box">
                 <img src="${logo}" alt="Newslify logo" />  
                 <h2>travel</h2>
                 <div class="news__div">
