@@ -14,12 +14,17 @@ async function fetchData(url){
         
     } else {
         const response = await fetch(url);
-        const data = await response.json();
+
+        if(response.ok){
+            const data = await response.json();
+            
+            cache[url.href] = data;
+            localStorage.setItem('cache', JSON.stringify(cache))
+
+            return data;
+        } 
+        return null;
         
-        cache[url.href] = data;
-        localStorage.setItem('cache', JSON.stringify(cache))
-        
-        return data;
     }
 }
 
