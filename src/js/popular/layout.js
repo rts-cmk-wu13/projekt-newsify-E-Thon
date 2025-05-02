@@ -17,9 +17,11 @@ document.querySelector("header").append(header())
 document.querySelector("main").append(news())
 document.querySelector("footer").append(footer())
 
-europe();
-health();
-sport();
-business();
-travel();
 initDarkMode();
+window.addEventListener('DOMContentLoaded', () => {
+    europe();
+    health();
+    sport();
+    business();
+    travel();
+});

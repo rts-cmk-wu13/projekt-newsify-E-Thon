@@ -17,11 +17,12 @@ export default function news() {
             </div>
             <ul class="news__articles europe">
                 <li class="news__article">
-                    <a href="#" class="news__link">
+                    <div class="news__div">
                         <img src="https://placecats.com/g/100/100" alt="Image of the news article">
                         <h3>Headline</h3>
                         <p>Surfing is a surface water sport in which the wave rider, referred to as...</p>
-                    </a>
+                        <a href="#">Read more <i class="fa-solid fa-angles-right"></i></a>
+                    </div>
                 </li>
             </ul>
         </li>
@@ -35,11 +36,12 @@ export default function news() {
             </div>
             <ul class="news__articles health">
                 <li class="news__article">
-                    <a href="#" class="news__link">
+                    <div class="news__div">
                         <img src="https://placecats.com/g/100/100" alt="Image of the news article">
                         <h3>Headline</h3>
                         <p>Surfing is a surface water sport in which the wave rider, referred to as...</p>
-                    </a>
+                        <a href="#">Read more <i class="fa-solid fa-angles-right"></i></a>
+                    </div>
                 </li>
             </ul>
         </li>
@@ -53,11 +55,12 @@ export default function news() {
             </div>
             <ul class="news__articles sport">
                 <li class="news__article">
-                    <a href="#" class="news__link">
+                    <div class="news__div">
                         <img src="https://placecats.com/g/100/100" alt="Image of the news article">
                         <h3>Headline</h3>
                         <p>Surfing is a surface water sport in which the wave rider, referred to as...</p>
-                    </a>
+                        <a href="#">Read more <i class="fa-solid fa-angles-right"></i></a>
+                    </div>
                 </li>
             </ul>
         </li>
@@ -71,11 +74,12 @@ export default function news() {
             </div>
             <ul class="news__articles business">
                 <li class="news__article">
-                    <a href="#" class="news__link">
+                    <div class="news__div">
                         <img src="https://placecats.com/g/100/100" alt="Image of the news article">
                         <h3>Headline</h3>
                         <p>Surfing is a surface water sport in which the wave rider, referred to as...</p>
-                    </a>
+                        <a href="#">Read more <i class="fa-solid fa-angles-right"></i></a>
+                    </div>
                 </li>
             </ul>
         </li>
@@ -89,11 +93,12 @@ export default function news() {
             </div>
             <ul class="news__articles travel">
                 <li class="news__article">
-                    <a href="#" class="news__link">
+                    <div class="news__div">
                         <img src="https://placecats.com/g/100/100" alt="Image of the news article">
                         <h3>Headline</h3>
                         <p>Surfing is a surface water sport in which the wave rider, referred to as...</p>
-                    </a>
+                        <a href="#">Read more <i class="fa-solid fa-angles-right"></i></a>
+                    </div>
                 </li>
             </ul>
         </li>

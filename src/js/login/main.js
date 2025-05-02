@@ -8,8 +8,8 @@ export default function main() {
     <img src="${logo}" alt="Newslify logo" />  
     <h1>Newsify</h1>
     <p class="mainSection__p">Welcome! Let's dive into your account!</p>
-    <a href="./src/views/home.html" class="btn1">Continue with Facebook</a>
-    <a href="./src/views/home.html" class="btn1">Continue with Google</a>
+    <a href="./home.html" class="btn1">Continue with Facebook</a>
+    <a href="./home.html" class="btn1">Continue with Google</a>
     <div>
         <span></span>
         <p>or</p>

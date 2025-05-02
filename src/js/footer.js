@@ -11,4 +11,9 @@ export default function footer() {
     `
     return ulElm;
 }
+
+export function currentPage() {
+    console.log('');
+    
+}
   
