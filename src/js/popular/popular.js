@@ -3,7 +3,7 @@ import {getTopStories} from '../utilities/new-york-times-api.js';
 // FETCH OG CACHE:
 const newsArticlesEurope = await getTopStories('world')
 const newsArticlesHealth = await getTopStories('health')
-const newsArticlesSport = await getTopStories('sport')
+const newsArticlesArts = await getTopStories('arts')
 const newsArticlesBusiness = await getTopStories('business')
 const newsArticlesTravel = await getTopStories('travel')
 
@@ -15,8 +15,8 @@ export function europe (){
     if (Array.isArray(europeArticles) && europeArticles.length > 0) {
         ul.innerHTML = europeArticles.map(europe => {
             return `
-            <li class="news__article">>
-                <div class="news__div">
+            <li class="news__article">
+                <div class="news__div" data-article="${europe.title}">
                     <img src="${europe.multimedia?.[0]?.url || 'https://placecats.com/g/100/100'}" alt="${europe.title}">
                     <h3>${europe.title}</h3>
                     <p>${europe.abstract}</p>
@@ -27,7 +27,7 @@ export function europe (){
         }).join("");
     } else {
         ul.innerHTML = `
-            <li class="news__article">>
+            <li class="news__article">
                 <div class="news__div">
                     <img src='https://placecats.com/g/100/100' alt="placeholder image">
                     <h3>Unavailable</h3>
@@ -45,8 +45,8 @@ export function health (){
     if (Array.isArray(newsArticlesHealth) && newsArticlesHealth.length > 0) {
         ul.innerHTML = newsArticlesHealth.map(health => {
             return `
-            <li class="news__article">>
-                <div class="news__div">
+            <li class="news__article">
+                <div class="news__div" data-article="${health.title}">
                     <img src="${health.multimedia?.[0]?.url || 'https://placecats.com/g/100/100'}" alt="${health.title}">
                     <h3>${health.title}</h3>
                     <p>${health.abstract}</p>
@@ -57,7 +57,7 @@ export function health (){
         }).join("");
     } else {
         ul.innerHTML = `
-            <li class="news__article">>
+            <li class="news__article">
                 <div class="news__div">
                     <img src='https://placecats.com/g/100/100' alt="placeholder image">
                     <h3>Unavailable</h3>
@@ -68,25 +68,25 @@ export function health (){
     }
 }
 
-export function sport (){
-    const ul = document.querySelector(".news__articles.sport");
+export function arts (){
+    const ul = document.querySelector(".news__articles.arts");
     
-    if (Array.isArray(newsArticlesSport) && newsArticlesSport.length > 0) {
-        ul.innerHTML = newsArticlesSport.map(sport => {
+    if (Array.isArray(newsArticlesArts) && newsArticlesArts.length > 0) {
+        ul.innerHTML = newsArticlesArts.map(arts => {
             return `
-            <li class="news__article">>
-                <div class="news__div">
-                    <img src="${sport.multimedia?.[0]?.url || 'https://placecats.com/g/100/100'}" alt="${sport.title}">
-                    <h3>${sport.title}</h3>
-                    <p>${sport.abstract}</p>
-                    <a href="${sport.url}" target="_blank">Read more <i class="fa-solid fa-angles-right"></i></a>
+            <li class="news__article">
+                <div class="news__div" data-article="${arts.title}">
+                    <img src="${arts.multimedia?.[0]?.url || 'https://placecats.com/g/100/100'}" alt="${arts.title}">
+                    <h3>${arts.title}</h3>
+                    <p>${arts.abstract}</p>
+                    <a href="${arts.url}" target="_blank">Read more <i class="fa-solid fa-angles-right"></i></a>
                 </div>
             </li>
             `;
         }).join("");
     } else {
         ul.innerHTML = `
-            <li class="news__article">>
+            <li class="news__article">
                 <div class="news__div">
                     <img src='https://placecats.com/g/100/100' alt="placeholder image">
                     <h3>Unavailable</h3>
@@ -104,8 +104,8 @@ export function business (){
     if (Array.isArray(newsArticlesBusiness) && newsArticlesBusiness.length > 0) {
         ul.innerHTML = newsArticlesBusiness.map(business => {
             return `
-            <li class="news__article">>
-                <div class="news__div">
+            <li class="news__article">
+                <div class="news__div" data-article="${business.title}">
                     <img src="${business.multimedia?.[0]?.url || 'https://placecats.com/g/100/100'}" alt="${business.title}">
                     <h3>${business.title}</h3>
                     <p>${business.abstract}</p>
@@ -117,7 +117,7 @@ export function business (){
         
     } else {
         ul.innerHTML = `
-            <li class="news__article">>
+            <li class="news__article">
                 <div class="news__div">
                     <img src='https://placecats.com/g/100/100' alt="placeholder image">
                     <h3>Unavailable</h3>
@@ -136,7 +136,7 @@ export function travel (){
         ul.innerHTML = newsArticlesTravel.map(travel => {
             return `
             <li class="news__article">
-                <div class="news__div">
+                <div class="news__div" data-article="${travel.title}">
                     <img src="${travel.multimedia?.[0]?.url || 'https://placecats.com/g/100/100'}" alt="${travel.title}">
                     <h3>${travel.title}</h3>
                     <p>${travel.abstract}</p>
@@ -148,7 +148,7 @@ export function travel (){
         
     } else {
         ul.innerHTML = `
-            <li class="news__article">>
+            <li class="news__article">
                 <div class="news__div">
                     <img src='https://placecats.com/g/100/100' alt="placeholder image">
                     <h3>Unavailable</h3>

@@ -48,12 +48,12 @@ export default function news() {
         <li>
             <div class="news__box">
                 <img src="${logo}" alt="Newslify logo" />  
-                <h2>sport</h2>
+                <h2>arts</h2>
                 <div class="news__div">
                     <i class="fa-solid fa-chevron-right chevron"></i>
                 </div>            
             </div>
-            <ul class="news__articles sport">
+            <ul class="news__articles arts">
                 <li class="news__article">
                     <div class="news__div">
                         <img src="https://placecats.com/g/100/100" alt="Image of the news article">

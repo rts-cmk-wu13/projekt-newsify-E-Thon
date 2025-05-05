@@ -3,7 +3,7 @@ import header from '../header.js'
 import footer from '../footer.js'
 import news from '../news.js'
 import searchfield from './searchfield.js'
-import { europe, health, sport, business, travel } from './articles.js'
+import { europe, health, arts, business, travel } from './articles.js'
 import initDarkMode from '../darkmode.js'
 import performSearch from './search.js'
 
@@ -24,7 +24,7 @@ initDarkMode();
 window.addEventListener('DOMContentLoaded', () => {
     europe();
     health();
-    sport();
+    arts();
     business();
     travel();
     performSearch();

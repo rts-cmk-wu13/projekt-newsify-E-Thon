@@ -1,5 +1,8 @@
+import { saveToLocalStorage, readFromLocalStorage } from "./localstorage";
+
 export default function swiper() {
     const containers = document.querySelectorAll(".news__articles");
+    let archivedArticles = readFromLocalStorage("archived") || [];
   
     containers.forEach((container) => {
       let initialX;
@@ -29,18 +32,25 @@ export default function swiper() {
         e.preventDefault();
         currentX = e.clientX;
         movedX = currentX - initialX;
-        console.log(movedX);
         
         // tjek om den allerede er en favorit så rød farve og eller så grøn:
-        e.target.closest(".news__article").style.backgroundColor =
-          "var(--archive)";
+        let currentArticle = e.target.closest(".news__div").dataset.article
+        const currentArticleContainer = e.target.closest(".news__article")
+          if (archivedArticles.includes(currentArticle)){
+            currentArticleContainer.style.backgroundColor = "red";
+            icon.innerHTML = `<i class="fa-solid fa-trash"></i>`;
+        } else {
+            currentArticleContainer.style.backgroundColor = "var(--archive)";
+            icon.innerHTML = `<i class="fa-regular fa-bookmark"></i>`;
+          }
+
         if (movedX < 0) {
           e.target.closest(".news__div").style.left = movedX + "px";
         }
   
         // vise et element
         if (movedX < -104) {
-          e.target.closest(".news__article").append(icon);
+          currentArticleContainer.append(icon);
         }
       }
   
@@ -49,7 +59,19 @@ export default function swiper() {
         initialX = undefined;
         if (movedX < -104) {
   
-          // gemmelogik eller slettelogik
+          // gemmelogik og slettelogik
+          let currentArticle = e.target.closest(".news__div").dataset.article
+          if (archivedArticles.includes(currentArticle)){
+            let newArticleArchived = archivedArticles.filter( title => title != currentArticle)
+            archivedArticles = newArticleArchived
+          } else {
+              archivedArticles.push(currentArticle);
+          }
+          saveToLocalStorage("archived", archivedArticles)
+          console.log(archivedArticles);
+          
+          
+          
 
           e.target.closest(".news__div").classList.add("animate");
           e.target.closest(".news__div").style.left = "0";

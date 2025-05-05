@@ -3,7 +3,7 @@ import header from '../header.js'
 import footer from '../footer.js'
 import news from '../news.js'
 import initDarkMode from '../darkmode.js'
-
+import archived from './archived.js'
 
 
 document.querySelector('#app').innerHTML = `
@@ -17,3 +17,4 @@ document.querySelector("main").append(news())
 document.querySelector("footer").append(footer())
 
 initDarkMode();
+archived();

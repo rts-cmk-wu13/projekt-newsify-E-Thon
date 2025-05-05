@@ -1,11 +1,11 @@
 import {getNewswire} from '../utilities/new-york-times-api.js';
 
 // FETCH OG CACHE:
-const newsArticlesEurope = await getNewswire('world')
-const newsArticlesHealth = await getNewswire('health')
-const newsArticlesSport = await getNewswire('sport')
-const newsArticlesBusiness = await getNewswire('business')
-const newsArticlesTravel = await getNewswire('travel')
+const newsArticlesEurope = await getNewswire('World')
+const newsArticlesHealth = await getNewswire('Health')
+const newsArticlesArts = await getNewswire('Arts')
+const newsArticlesBusiness = await getNewswire('Business')
+const newsArticlesTravel = await getNewswire('Travel')
 
 
 export function europe (){
@@ -15,7 +15,7 @@ export function europe (){
     ul.innerHTML = europeArticles.map(europe => {
         return `
         <li class="news__article">
-            <div class="news__div">
+            <div class="news__div" data-article="${europe.title}">
                 <img src="${europe.multimedia?.[0]?.url || 'https://placecats.com/g/100/100'}" alt="${europe.title}">
                 <h3>${europe.title}</h3>
                 <p>${europe.abstract}</p>
@@ -32,7 +32,7 @@ export function health (){
     ul.innerHTML = newsArticlesHealth.map(health => {
         return `
         <li class="news__article">
-            <div class="news__div">
+            <div class="news__div" data-article="${health.title}">
                 <img src="${health.multimedia?.[0]?.url || 'https://placecats.com/g/100/100'}" alt="${health.title}">
                 <h3>${health.title}</h3>
                 <p>${health.abstract}</p>
@@ -42,19 +42,17 @@ export function health (){
         `
     }).join("");
 }
-export function sport (){
-    const ul = document.querySelector(".news__articles.sport");
-    const sportArticles = newsArticlesSport.filter(article => article.subsection === "Europe");
-
+export function arts (){
+    const ul = document.querySelector(".news__articles.arts");
     
-    ul.innerHTML = sportArticles.map(sport => {
+    ul.innerHTML = newsArticlesArts.map(arts => {
         return `
         <li class="news__article">
-            <div class="news__div">
-                <img src="${sport.multimedia?.[0]?.url || 'https://placecats.com/g/100/100'}" alt="${sport.title}">
-                <h3>${sport.title}</h3>
-                <p>${sport.abstract}</p>
-                <a href="${sport.url}" target="_blank">Read more <i class="fa-solid fa-angles-right"></i></a>
+            <div class="news__div" data-article="${arts.title}">
+                <img src="${arts.multimedia?.[0]?.url || 'https://placecats.com/g/100/100'}" alt="${arts.title}">
+                <h3>${arts.title}</h3>
+                <p>${arts.abstract}</p>
+                <a href="${arts.url}" target="_blank">Read more <i class="fa-solid fa-angles-right"></i></a>
             </div>
         </li>
         `
@@ -67,7 +65,7 @@ export function business (){
     ul.innerHTML = newsArticlesBusiness.map(business => {
         return `
         <li class="news__article">
-            <div class="news__div">
+            <div class="news__div" data-article="${business.title}">
                 <img src="${business.multimedia?.[0]?.url || 'https://placecats.com/g/100/100'}" alt="${business.title}">
                 <h3>${business.title}</h3>
                 <p>${business.abstract}</p>
@@ -84,7 +82,7 @@ export function travel (){
     ul.innerHTML = newsArticlesTravel.map(travel => {
         return `
         <li class="news__article">
-            <div class="news__div">
+            <div class="news__div" data-article="${travel.title}">
                 <img src="${travel.multimedia?.[0]?.url || 'https://placecats.com/g/100/100'}" alt="${travel.title}">
                 <h3>${travel.title}</h3>
                 <p>${travel.abstract}</p>

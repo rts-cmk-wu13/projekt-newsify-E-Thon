@@ -2,9 +2,8 @@ import '../../style/style.scss'
 import header from '../header.js'
 import footer from '../footer.js'
 import news from '../news.js'
-import { europe, health, sport, business, travel } from './popular.js'
+import { europe, health, arts, business, travel } from './popular.js'
 import initDarkMode from '../darkmode.js'
-import newsList from '../newsList.js'
 
 
 
@@ -22,9 +21,7 @@ initDarkMode();
 window.addEventListener('DOMContentLoaded', () => {
     europe();
     health();
-    sport();
+    arts();
     business();
     travel();
-
-    newsList();
 });
