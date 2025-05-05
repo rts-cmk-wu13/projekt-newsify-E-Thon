@@ -16,7 +16,7 @@ export default function main() {
         <span></span>
     </div>
     <a href="./home.html" class="btn2">Sign in with password</a>
-    <p class="mainSection__p">Don't have an account? <a href="./src/views/home.html">Sign up</a></p>
+    <p class="mainSection__p">Don't have an account? <a href="./home.html">Sign up</a></p>
     
         
     `;

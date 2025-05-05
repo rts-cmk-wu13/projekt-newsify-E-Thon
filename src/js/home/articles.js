@@ -24,6 +24,8 @@ export function europe (){
         </li>
         `
     }).join("");
+
+    return europeArticles;
 }
 
 export function health (){
