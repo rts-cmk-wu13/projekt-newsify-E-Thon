@@ -8,6 +8,7 @@ export default defineConfig({
     },
     build: {
       outDir: 'docs',
+      target: 'esnext',
       rollupOptions: {
         input: getHtmlEntries()
       }

@@ -6,6 +6,7 @@ import searchfield from './searchfield.js'
 import { europe, health, arts, business, travel } from './articles.js'
 import initDarkMode from '../darkmode.js'
 import performSearch from './search.js'
+import active from '../active.js'
 
 
 
@@ -20,6 +21,7 @@ document.querySelector("main").append(searchfield(), news())
 document.querySelector("footer").append(footer())
 
 initDarkMode();
+active();
 
 window.addEventListener('DOMContentLoaded', () => {
     europe();
