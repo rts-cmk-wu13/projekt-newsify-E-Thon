@@ -6,7 +6,8 @@ export default function switchBtn() {
                 <input type="checkbox" id="switch" value="false" name="switch">
                 <span class="slider round"></span>
             </form>
-        ` 
+        `
     })
+
 }
 

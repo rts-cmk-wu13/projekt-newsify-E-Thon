@@ -6,7 +6,7 @@ import news from '../news.js'
 import switchBtn from './switch.js'
 import initDarkMode from '../darkmode.js'
 import active from '../active.js'
-
+import categories from './categories.js'
 
 
 document.querySelector('#app').innerHTML = `
@@ -22,3 +22,5 @@ document.querySelector("footer").append(footer())
 switchBtn();
 initDarkMode();
 active();
+categories();
+

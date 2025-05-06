@@ -1,4 +1,4 @@
-import{i as c}from"./darkmode-D7SAhOzT.js";const l=""+new URL("../onboarding1.png",import.meta.url).href,d=""+new URL("../onboarding2.png",import.meta.url).href,m=""+new URL("../onboarding3.png",import.meta.url).href;function p(){let e=document.createElement("div");return e.className="mainDivBoarding",e.innerHTML=`
+import{i as c}from"./darkmode-FyO9-oF3.js";const l=""+new URL("../onboarding1.png",import.meta.url).href,d=""+new URL("../onboarding2.png",import.meta.url).href,m=""+new URL("../onboarding3.png",import.meta.url).href;function p(){let e=document.createElement("div");return e.className="mainDivBoarding",e.innerHTML=`
   <article class="step1 active">
     <img src="${l}" alt="Login onboarding screenshot" />
     <h2>Stay Connected, Everywhere, Anytime</h2>
