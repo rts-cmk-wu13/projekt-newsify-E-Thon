@@ -1,4 +1,4 @@
-import { saveToLocalStorage, readFromLocalStorage } from "./localstorage";
+import { readFromLocalStorage, saveToLocalStorage } from "./utilities/localstorage";
 
 export default function swiper() {
     const containers = document.querySelectorAll(".news__articles");

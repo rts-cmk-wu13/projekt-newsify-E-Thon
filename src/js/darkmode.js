@@ -1,4 +1,4 @@
-import { readFromLocalStorage, saveToLocalStorage } from './localstorage.js';
+import { readFromLocalStorage, saveToLocalStorage } from "./utilities/localstorage";
 
 export default function initDarkMode() {
     const rootElm = document.documentElement;

@@ -1,4 +1,3 @@
-
 /**
  * Save an item to Local Storage as a string
  * @param {string} key - key to be used in local storage

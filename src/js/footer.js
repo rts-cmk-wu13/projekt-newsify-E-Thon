@@ -1,3 +1,4 @@
+import active from "./active";
 
 export default function footer() {
     let ulElm = document.createElement("ul")
@@ -10,10 +11,8 @@ export default function footer() {
         <li><a href="settings.html" class="footer__link--settings"><i class="fa-solid fa-gear"></i></i>Settings</a></li>
     `
     return ulElm;
+    
+    active();
 }
 
-export function currentPage() {
-    console.log('');
-    
-}
   

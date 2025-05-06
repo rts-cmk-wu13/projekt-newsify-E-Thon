@@ -1,7 +1,6 @@
 import logo from "/newsify_logo.png";
-import { readFromLocalStorage } from "../localstorage";
 import { getNewswire, getTopStories } from "../utilities/new-york-times-api.js";
-// console.log(subNews);
+import { readFromLocalStorage } from "../utilities/localstorage.js";
 
 export default async function archived() {
   const ulElm = document.querySelector(".news");
