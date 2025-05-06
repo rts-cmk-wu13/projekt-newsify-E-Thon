@@ -19,26 +19,20 @@ export default function categories(){
       saveToLocalStorage("categories", activeBtn)
     }
     else {
-      console.log("ER def");
       const cat = readFromLocalStorage("categories");
-      console.log(cat);
-    
+
       news__div.forEach((div) => {
         const headerCategory = div.closest(".news__box").querySelector("h2").innerHTML
         let input = div.querySelector("input")
         input.checked = !cat[headerCategory]
       })
-    
-    
     }
-    
-    console.log(categories);
     
     function handleClick(event) {
       const btn = event.target
       const categoryHeader = btn.closest(".news__box").querySelector("h2").innerHTML
+      let cat;
       if (!btn.checked) {
-        let cat = readFromLocalStorage("categories");
         switch (categoryHeader) {
           case "europe":
             cat = readFromLocalStorage("categories");
@@ -67,7 +61,6 @@ export default function categories(){
             break;
         }
       } else if (btn.checked) {
-        let cat = readFromLocalStorage("categories");
         switch (categoryHeader) {
           case "europe":
             cat = readFromLocalStorage("categories");
@@ -97,9 +90,5 @@ export default function categories(){
         }
       }
       console.log(readFromLocalStorage("categories"));
-    
-    }
-    
-    
-    
+    } 
 }

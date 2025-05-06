@@ -8,7 +8,6 @@ import initDarkMode from '../darkmode.js'
 import active from '../active.js'
 import categories from './categories.js'
 
-
 document.querySelector('#app').innerHTML = `
     <header></header>
     <main></main>
