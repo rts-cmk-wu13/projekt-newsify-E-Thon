@@ -44,7 +44,7 @@ export default function swiper() {
             icon.innerHTML = `<i class="fa-regular fa-bookmark"></i>`;
           }
 
-        if (movedX < 0) {
+        if (movedX < -20) {
           e.target.closest(".news__div").style.left = movedX + "px";
         }
   

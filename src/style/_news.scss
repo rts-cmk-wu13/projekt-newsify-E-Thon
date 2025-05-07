@@ -39,7 +39,7 @@
             display:none;
             padding-inline-start: inherit;
             overflow: clip;
-            touch-action: none;
+            touch-action: pan-y;
         }
         li {
             position: relative;
