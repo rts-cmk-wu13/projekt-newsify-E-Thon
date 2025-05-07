@@ -1,0 +1,36 @@
+@use "../variables/color" as var;
+@use "../placeholders/base";
+@use "../placeholders/img";
+@use "../placeholders/buttons";
+
+.upperSection {
+  h4 {
+    text-align: center;
+    color: var(--highlight);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-block: .1rem;
+  }
+  p {
+    text-align: center;
+    color: light-dark(var(--navs-l), var(--fonts-d));
+    font-size: 1.25rem;
+    font-weight: 600;
+    padding-bottom: 1.5rem;
+  }
+}
+.lowerDiv {
+  padding: 2rem 0 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .btn3 {
+    @extend %button3;
+  }
+  p {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 1rem;
+    color: light-dark(var(--version-l), var(--version-d));
+  }
+}

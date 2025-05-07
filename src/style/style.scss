@@ -1,0 +1,27 @@
+@use "./placeholders/base";
+@use "./placeholders/img";
+@use "./pages/login";
+@use "./pages/home";
+// @use "./pages/popular";
+// @use "./pages/archive";
+@use "./pages/splash";
+@use "./pages/onboarding";
+@use "./pages/settings";
+@use "search";
+@use "switch";
+@use "news";
+@use "fonts";
+@use "header";
+@use "footer";
+
+
+body {
+    @extend %base;
+    @extend %img;
+    margin: 0 auto;
+}
+
+#app {
+    height: 100%;
+    margin: 0 auto;
+}

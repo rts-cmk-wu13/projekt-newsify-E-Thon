@@ -1,0 +1,20 @@
+@use "./variables/color" as var;
+@use "./placeholders/base";
+@use "./placeholders/img";
+
+.headerElm {
+  @extend %base;
+  @extend %img;
+  padding: 1rem;
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    img {
+      width: 1.1875rem;
+      height: 1.686rem;
+    }
+  }
+}
