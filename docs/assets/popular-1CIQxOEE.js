@@ -1,4 +1,4 @@
-import{i as n}from"./darkmode-FyO9-oF3.js";import{h as o,n as d,f as m,a as p}from"./news-BNAMOQJL.js";import{a as t}from"./new-york-times-api-QNcKCIMv.js";import"./newsify_logo-BMn6THKq.js";const h=await t("world"),l=await t("health"),s=await t("arts"),r=await t("business"),c=await t("travel");function _(){const a=document.querySelector(".news__articles.europe"),e=h.filter(i=>i.subsection==="europe");Array.isArray(e)&&e.length>0?a.innerHTML=e.map(i=>`
+import{i as n}from"./darkmode-FyO9-oF3.js";import{h as o,n as d,f as m,a as p}from"./news-D2ovteyi.js";import{a as t}from"./new-york-times-api-QNcKCIMv.js";import"./newsify_logo-BMn6THKq.js";const h=await t("world"),l=await t("health"),s=await t("arts"),r=await t("business"),c=await t("travel");function _(){const a=document.querySelector(".news__articles.europe"),e=h.filter(i=>i.subsection==="europe");Array.isArray(e)&&e.length>0?a.innerHTML=e.map(i=>`
             <li class="news__article">
                 <div class="news__div" data-article="${i.title}">
                     <img src="${i.multimedia?.[0]?.url||"https://placecats.com/g/100/100"}" alt="${i.title}">

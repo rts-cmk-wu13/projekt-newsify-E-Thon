@@ -1,4 +1,4 @@
-import{r as o,i as n}from"./darkmode-FyO9-oF3.js";import{h as c,n as d,f as m,a as u}from"./news-BNAMOQJL.js";import{l as h}from"./newsify_logo-BMn6THKq.js";import{g as a,a as s}from"./new-york-times-api-QNcKCIMv.js";async function f(){const t=document.querySelector(".news");//! ARCHIVED ARTICLES:
+import{r as o,i as n}from"./darkmode-FyO9-oF3.js";import{h as c,n as d,f as m,a as u}from"./news-D2ovteyi.js";import{l as h}from"./newsify_logo-BMn6THKq.js";import{g as a,a as s}from"./new-york-times-api-QNcKCIMv.js";async function f(){const t=document.querySelector(".news");//! ARCHIVED ARTICLES:
 const r=o("archived")||[],i=(await Promise.all([a("World"),a("Health"),a("Arts"),a("Business"),a("Travel"),s("world"),s("health"),s("arts"),s("business"),s("travel")])).flat().filter(e=>r.includes(e.title));//! ARCHIVED PAGE CONTENT:
 t.innerHTML=`
     <li>
