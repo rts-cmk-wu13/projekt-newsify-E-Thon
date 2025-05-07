@@ -1,4 +1,4 @@
-import path from 'path';
+import path, { resolve } from 'path';
 import fs from 'fs';
 import { fileURLToPath } from 'url';
 

@@ -1,4 +1,5 @@
 import { defineConfig } from "vite";
+import { resolve } from "path";
 import getHtmlEntries from "./src/js/htmlRead.js";
 
 export default defineConfig({
@@ -10,17 +11,20 @@ export default defineConfig({
       outDir: 'docs',
       target: 'esnext',
       rollupOptions: {
-        input: getHtmlEntries()
+        input: {
+          ...getHtmlEntries(),
+          index: resolve(__dirname, 'index.html')
+        }
       }
     },
     test: {
-        workspace: [ 
-          { 
-            extends: true, 
-            test: { 
-              environment: 'jsdom', 
-            }, 
-          }, 
-        ], 
+        workspace: [
+          {
+            extends: true,
+            test: {
+              environment: 'jsdom',
+            },
+          },
+        ],
       },
   })
